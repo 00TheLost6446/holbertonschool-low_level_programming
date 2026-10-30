@@ -2,6 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
+/**
+ * main - Prints the last digit of a random number and whether it is
+ *        greater than 5, less than 6 and not 0, or zero.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
