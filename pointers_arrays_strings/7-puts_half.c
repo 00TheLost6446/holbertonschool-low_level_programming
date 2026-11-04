@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * puts2 - prints every other character of a string, starting with
- * the first character, followed by a new line
+ * puts_half - prints the second half of a string, followed by a new line
  * @str: the string to print
+ *
+ * Description: if the length is odd, prints the last (length - 1) / 2
+ * characters.
  *
  * Return: Nothing.
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int len = 0;
 	int i;
@@ -15,7 +17,7 @@ void puts2(char *str)
 	while (str[len] != '\0')
 		len++;
 
-	for (i = 0; i < len; i += 2)
+	for (i = (len + 1) / 2; i < len; i++)
 		_putchar(str[i]);
 
 	_putchar('\n');
