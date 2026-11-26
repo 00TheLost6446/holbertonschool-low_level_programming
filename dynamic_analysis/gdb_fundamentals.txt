@@ -1,3 +1,1 @@
-TAG_ACC: x
-KEY: x
-ACC_AFTER_I0: acc
+printf "0x%08X\n", x
