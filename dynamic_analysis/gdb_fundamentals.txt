@@ -1,1 +1,5 @@
-printf "0x%08X\n", x
+list derive_key
+break derive_key
+run < input.txt
+next
+quit
