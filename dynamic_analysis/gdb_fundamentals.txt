@@ -1,26 +1,12 @@
-#include "main.h"
-/
-find_sqrt - Finds the natural square root recursively
-@n: Number to calculate
-@i: Number being tested
-Return: Square root, or -1 if not found/
-int find_sqrt(int n, int i)
-{
-if (i == n / i && n % i == 0)
-return (i);
-if (i > n / i)
-return (-1);
-return (find_sqrt(n, i + 1));
-}
-/
-_sqrt_recursion - Returns the natural square root of a number
-@n: Number to calculate
-Return: Natural square root, or -1 if none exists/
-int _sqrt_recursion(int n)
-{
-if (n < 0)
-return (-1);
-if (n == 0)
-return (0);
-return (find_sqrt(n, 1));
-}
+list derive_key
+list compute_target
+# press Enter to see more lines
+
+# Line 1: first statement AFTER the tag loop, before x is combined
+break source.c:N1
+# Line 2: the "return" line of derive_key
+break source.c:N2
+# Line 3: LAST statement in compute_target's loop body that changes acc
+break source.c:N3 if i == 0
+
+run < input.txt
