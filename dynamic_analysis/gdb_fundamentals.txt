@@ -1,6 +1,3 @@
-frame
-# at N1 and N2:
-printf "0x%08X\n", x
-# at N3: run "next" first so that line executes, then:
-printf "0x%08X\n", acc
-continue
+TAG_ACC: x
+KEY: x
+ACC_AFTER_I0: acc
