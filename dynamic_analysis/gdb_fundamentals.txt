@@ -1,12 +1,6 @@
-list derive_key
-list compute_target
-# press Enter to see more lines
-
-# Line 1: first statement AFTER the tag loop, before x is combined
-break source.c:N1
-# Line 2: the "return" line of derive_key
-break source.c:N2
-# Line 3: LAST statement in compute_target's loop body that changes acc
-break source.c:N3 if i == 0
-
-run < input.txt
+frame
+# at N1 and N2:
+printf "0x%08X\n", x
+# at N3: run "next" first so that line executes, then:
+printf "0x%08X\n", acc
+continue
